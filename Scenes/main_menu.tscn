@@ -9,12 +9,17 @@ offset_right = 250.0
 offset_bottom = 144.0
 
 [node name="Title" type="RichTextLabel" parent="UI"]
-layout_mode = 0
-offset_left = 293.0
-offset_top = 52.0
-offset_right = 839.0
-offset_bottom = 174.0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 4.598
+anchor_bottom = 4.521
+offset_left = 287.0
+offset_top = 89.0
+offset_right = -316.5
+offset_bottom = -440.024
+theme_override_colors/default_color = Color(0.862745, 0.631373, 0.729412, 1)
 theme_override_font_sizes/normal_font_size = 79
+theme_override_font_sizes/italics_font_size = 1
 text = "Alien Cow Sim"
 
 [node name="Start" type="Button" parent="UI"]
