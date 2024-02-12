@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bvlya2krh0n5y"]
+
+[node name="Title" type="Node2D"]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 250.0
+offset_bottom = 144.0
+
+[node name="Title" type="RichTextLabel" parent="UI"]
+layout_mode = 0
+offset_left = 293.0
+offset_top = 52.0
+offset_right = 839.0
+offset_bottom = 174.0
+theme_override_font_sizes/normal_font_size = 79
+text = "Alien Cow Sim"
+
+[node name="Start" type="Button" parent="UI"]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 337.0
+offset_right = 700.0
+offset_bottom = 396.0
+text = "Play Game"
+
+[node name="Start2" type="Button" parent="UI"]
+layout_mode = 0
+offset_left = 417.0
+offset_top = 472.0
+offset_right = 701.0
+offset_bottom = 531.0
+text = "Settings"
