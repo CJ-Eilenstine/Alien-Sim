@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bvlya2krh0n5y"]
 
-[ext_resource type="Theme" uid="uid://33s77meh1437" path="res://Themes/title_theme.tres" id="1_g6dv3"]
+[ext_resource type="Theme" uid="uid://33s77meh1437" path="res://themes/title_theme.tres" id="1_g6dv3"]
 [ext_resource type="Texture2D" uid="uid://dxrtctkp6gi1f" path="res://Images/titleBG.jpg" id="2_enqk2"]
 
 [node name="Title" type="Node2D"]
@@ -20,10 +20,10 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.4
-offset_left = 2.0
-offset_top = 23.0
-offset_right = 2.0
-offset_bottom = 23.0
+offset_left = 38.0
+offset_top = -2.0
+offset_right = 38.0
+offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_g6dv3")
@@ -35,9 +35,9 @@ vertical_alignment = 1
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI"]
 layout_mode = 0
 offset_left = 490.0
-offset_top = 344.0
-offset_right = 580.0
-offset_bottom = 410.0
+offset_top = 882.0
+offset_right = 1095.0
+offset_bottom = 1007.0
 scale = Vector2(1.52, 1.4)
 
 [node name="Play" type="Button" parent="CanvasLayer/UI/VBoxContainer"]
@@ -53,5 +53,6 @@ layout_mode = 2
 text = "Quit"
 
 [node name="TitleBg" type="Sprite2D" parent="."]
-position = Vector2(574, 339)
+position = Vector2(967.778, 560.5)
+scale = Vector2(1.68364, 1.68364)
 texture = ExtResource("2_enqk2")
