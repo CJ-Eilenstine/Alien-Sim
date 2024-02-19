@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bvlya2krh0n5y"]
+[gd_scene load_steps=3 format=3 uid="uid://bvlya2krh0n5y"]
 
-[ext_resource type="Theme" uid="uid://33s77meh1437" path="res://Themes/title_theme.tres" id="1_g6dv3"]
+[ext_resource type="Theme" uid="uid://33s77meh1437" path="res://themes/title_theme.tres" id="1_g6dv3"]
+[ext_resource type="Texture2D" uid="uid://dxrtctkp6gi1f" path="res://Images/titleBG.jpg" id="2_enqk2"]
 
 [node name="Title" type="Node2D"]
 
@@ -19,9 +20,14 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.4
+offset_left = 2.0
+offset_top = 23.0
+offset_right = 2.0
+offset_bottom = 23.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_g6dv3")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 text = "Alien Cow Sim"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -45,3 +51,7 @@ text = "Settings"
 [node name="Quit" type="Button" parent="CanvasLayer/UI/VBoxContainer"]
 layout_mode = 2
 text = "Quit"
+
+[node name="TitleBg" type="Sprite2D" parent="."]
+position = Vector2(574, 339)
+texture = ExtResource("2_enqk2")
