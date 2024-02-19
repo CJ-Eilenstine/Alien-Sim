@@ -53,6 +53,6 @@ layout_mode = 2
 text = "Quit"
 
 [node name="TitleBg" type="Sprite2D" parent="."]
-position = Vector2(967.778, 540)
-scale = Vector2(1.68364, 1.66667)
+position = Vector2(959.001, 540)
+scale = Vector2(1.6684, 1.66667)
 texture = ExtResource("2_enqk2")
