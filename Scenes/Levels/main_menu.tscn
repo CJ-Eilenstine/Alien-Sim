@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bvlya2krh0n5y"]
 
-[ext_resource type="Theme" uid="uid://33s77meh1437" path="res://Themes/title_theme.tres" id="1_g6dv3"]
+[ext_resource type="Theme" uid="uid://33s77meh1437" path="res://themes/title_theme.tres" id="1_g6dv3"]
 [ext_resource type="Texture2D" uid="uid://dxrtctkp6gi1f" path="res://Images/titleBG.jpg" id="2_enqk2"]
 
 [node name="Title" type="Node2D"]
