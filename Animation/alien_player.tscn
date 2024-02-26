@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b07ba01758dc8"]
+
+[ext_resource type="Texture2D" uid="uid://c2smqifmsflfs" path="res://Assets/Sprites/AlienSpriteBig.png" id="1_g7ptl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_myw2r"]
+size = Vector2(317, 62)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_g7ptl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 51)
+shape = SubResource("RectangleShape2D_myw2r")
