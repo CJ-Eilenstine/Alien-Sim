@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://duqe23o7hk1se"]
 
-[ext_resource type="Texture2D" uid="uid://dwfeury2ki8h4" path="res://Assets/Cows/BrownCowSheet.png" id="1_ynm2d"]
+[ext_resource type="Texture2D" uid="uid://dwfeury2ki8h4" path="res://Assets/Cows/BrownCowSheet.png" id="1_5lsjw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b3mto"]
-size = Vector2(33, 25)
+size = Vector2(31.5, 12)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pfin3"]
-texture = ExtResource("1_ynm2d")
+texture = ExtResource("1_5lsjw")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -66,7 +66,7 @@ _data = {
 [node name="BrownCow" type="CharacterBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 3.5)
+position = Vector2(-0.25, 10)
 shape = SubResource("RectangleShape2D_b3mto")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -77,8 +77,9 @@ format = 2
 libraries = {
 "": SubResource("AnimationLibrary_8aabl")
 }
+autoplay = "Isle"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("1_ynm2d")
+texture = ExtResource("1_5lsjw")
 hframes = 3
