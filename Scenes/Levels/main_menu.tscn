@@ -63,6 +63,8 @@ position = Vector2(959.001, 540)
 scale = Vector2(1.6684, 1.66667)
 texture = ExtResource("2_enqk2")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [connection signal="pressed" from="CanvasLayer/UI/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="CanvasLayer/UI/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="CanvasLayer/UI/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
