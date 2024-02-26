@@ -1,13 +1,6 @@
-<<<<<<< Updated upstream
-[gd_scene load_steps=8 format=3 uid="uid://bo4qcr1y4dj6o"]
-
-[ext_resource type="PackedScene" uid="uid://b07ba01758dc8" path="res://Animation/alien_player.tscn" id="1_donoo"]
-[ext_resource type="PackedScene" uid="uid://duqe23o7hk1se" path="res://Animation/brown_cow.tscn" id="2_0awl2"]
-=======
 [gd_scene load_steps=7 format=3 uid="uid://bo4qcr1y4dj6o"]
 
 [ext_resource type="AudioStream" uid="uid://b4cwanmn4ob5b" path="res://Audio/Alien Play.ogg" id="1_kpe8t"]
->>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f7tgp"]
 size = Vector2(1920, 29.75)
@@ -61,15 +54,6 @@ shape = SubResource("RectangleShape2D_ipgti")
 
 [node name="Cow Spawn" type="Node" parent="."]
 
-<<<<<<< Updated upstream
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_donoo")]
-position = Vector2(864, 505)
-
-[node name="BrownCow" parent="." instance=ExtResource("2_0awl2")]
-position = Vector2(784, 782)
-scale = Vector2(5, 5)
-=======
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_kpe8t")
 autoplay = true
->>>>>>> Stashed changes
