@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bvlya2krh0n5y"]
+[gd_scene load_steps=7 format=3 uid="uid://bvlya2krh0n5y"]
 
-[ext_resource type="Theme" uid="uid://33s77meh1437" path="res://themes/title_theme.tres" id="1_g6dv3"]
+[ext_resource type="Theme" uid="uid://33s77meh1437" path="res://Themes/title_theme.tres" id="1_g6dv3"]
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_nxq51"]
 [ext_resource type="Texture2D" uid="uid://dxrtctkp6gi1f" path="res://Images/titleBG.jpg" id="2_enqk2"]
 [ext_resource type="FontFile" uid="uid://cb7i6esty10vm" path="res://Assets/Fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf" id="3_dscyh"]
+[ext_resource type="Texture2D" uid="uid://dcgxy7kvv4vw4" path="res://Assets/Sprites/planet_main.png" id="4_tnlle"]
 [ext_resource type="AudioStream" uid="uid://c8xikrmsv16qm" path="res://Audio/Alien Cow Loops.ogg" id="5_v0bon"]
 
 [node name="Title" type="Node2D"]
@@ -58,6 +59,11 @@ text = "Settings"
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_dscyh")
 text = "Quit"
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/UI"]
+position = Vector2(1654, 182)
+scale = Vector2(2.05091, 2.12903)
+texture = ExtResource("4_tnlle")
 
 [node name="TitleBg" type="Sprite2D" parent="."]
 position = Vector2(959.001, 540)
