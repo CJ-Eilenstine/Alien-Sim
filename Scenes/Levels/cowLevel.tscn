@@ -1,4 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bo4qcr1y4dj6o"]
+[gd_scene load_steps=7 format=3 uid="uid://bo4qcr1y4dj6o"]
+
+[ext_resource type="TileSet" uid="uid://b1wnasplottde" path="res://Assets/dirt.tres" id="1_jaxvr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f7tgp"]
 size = Vector2(1920, 29.75)
@@ -51,3 +53,7 @@ position = Vector2(1816, 542)
 shape = SubResource("RectangleShape2D_ipgti")
 
 [node name="Cow Spawn" type="Node" parent="."]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("1_jaxvr")
+format = 2
