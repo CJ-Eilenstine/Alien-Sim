@@ -1,4 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bo4qcr1y4dj6o"]
+[gd_scene load_steps=7 format=3 uid="uid://bo4qcr1y4dj6o"]
+
+[ext_resource type="PackedScene" uid="uid://b07ba01758dc8" path="res://Animation/alien_player.tscn" id="1_donoo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f7tgp"]
 size = Vector2(1920, 29.75)
@@ -51,3 +53,6 @@ position = Vector2(1816, 542)
 shape = SubResource("RectangleShape2D_ipgti")
 
 [node name="Cow Spawn" type="Node" parent="."]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_donoo")]
+position = Vector2(864, 505)
