@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bvlya2krh0n5y"]
+[gd_scene load_steps=6 format=3 uid="uid://bvlya2krh0n5y"]
 
 [ext_resource type="Theme" uid="uid://33s77meh1437" path="res://themes/title_theme.tres" id="1_g6dv3"]
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_nxq51"]
 [ext_resource type="Texture2D" uid="uid://dxrtctkp6gi1f" path="res://Images/titleBG.jpg" id="2_enqk2"]
 [ext_resource type="FontFile" uid="uid://cb7i6esty10vm" path="res://Assets/Fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf" id="3_dscyh"]
+[ext_resource type="AudioStream" uid="uid://c8xikrmsv16qm" path="res://Audio/Alien Cow Loops.ogg" id="5_v0bon"]
 
 [node name="Title" type="Node2D"]
 script = ExtResource("1_nxq51")
@@ -64,6 +65,8 @@ scale = Vector2(1.6684, 1.66667)
 texture = ExtResource("2_enqk2")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_v0bon")
+autoplay = true
 
 [connection signal="pressed" from="CanvasLayer/UI/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="CanvasLayer/UI/VBoxContainer/Settings" to="." method="_on_settings_pressed"]

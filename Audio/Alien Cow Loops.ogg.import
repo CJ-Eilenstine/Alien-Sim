@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c8xikrmsv16qm"
+path="res://.godot/imported/Alien Cow Loops.ogg-a09b8122fad3c035176a29aa910f05da.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Alien Cow Loops.ogg"
+dest_files=["res://.godot/imported/Alien Cow Loops.ogg-a09b8122fad3c035176a29aa910f05da.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
