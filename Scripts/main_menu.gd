@@ -1,7 +1,7 @@
 extends Node2D
 
 func _on_play_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://Scenes/Levels/cowLevel.tscn")
 
 
 func _on_settings_pressed():
