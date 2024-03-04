@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgxptbo5nijcb"]
+
+[ext_resource type="Script" path="res://Scripts/levelSelect.gd" id="1_3d3td"]
+
+[node name="LevelSelect" type="Node2D"]
+script = ExtResource("1_3d3td")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 732.0
+offset_top = 407.0
+offset_right = 1164.0
+offset_bottom = 646.0
+
+[node name="Homeworld Farm" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.254902, 0.258824, 0.25098, 1)
+theme_override_font_sizes/font_size = 50
+text = "Homeworld Farm"
+
+[node name="Earth" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+action_mode = 0
+text = "Earth"
+
+[node name="Planet 2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Planet 2"
+
+[connection signal="pressed" from="VBoxContainer/Earth" to="." method="_on_earth_pressed"]
+[connection signal="pressed" from="VBoxContainer/Planet 2" to="." method="_on_planet_2_pressed"]
