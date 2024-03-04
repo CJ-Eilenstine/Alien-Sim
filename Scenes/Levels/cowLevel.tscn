@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cp514veahqse3"]
+[gd_scene load_steps=19 format=3 uid="uid://cp514veahqse3"]
 
 [ext_resource type="AudioStream" uid="uid://b4cwanmn4ob5b" path="res://Audio/Alien Play.ogg" id="1_kpe8t"]
 [ext_resource type="Texture2D" uid="uid://v0urxe0mfmof" path="res://Assets/Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Fences.png" id="2_qgl7g"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://174uykc5g2pn" path="res://Assets/Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Wooden House.png" id="7_utuvp"]
 [ext_resource type="Script" path="res://Scripts/main_camera.gd" id="9_p0b6v"]
 [ext_resource type="PackedScene" uid="uid://cfexg271n2iqe" path="res://Animation/testCow.tscn" id="10_me566"]
+[ext_resource type="PackedScene" uid="uid://bjcbbw8cjj5ji" path="res://Scenes/UI/MapButton.tscn" id="11_4h6y1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_05a3m"]
 texture = ExtResource("2_qgl7g")
@@ -863,3 +864,7 @@ tilemap = NodePath("../TileMap")
 [node name="cow1" parent="." instance=ExtResource("10_me566")]
 position = Vector2(1376, 499)
 scale = Vector2(5, 5)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MapButton" parent="CanvasLayer" instance=ExtResource("11_4h6y1")]
