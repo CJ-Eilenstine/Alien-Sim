@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://cqo35a5qaaf2h"]
+[gd_scene load_steps=2 format=3 uid="uid://cqo35a5qaaf2h"]
+
+[ext_resource type="PackedScene" uid="uid://bjcbbw8cjj5ji" path="res://Scenes/UI/MapButton.tscn" id="1_ftm3g"]
 
 [node name="HomeworldFarm" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MapButton" parent="CanvasLayer" instance=ExtResource("1_ftm3g")]
