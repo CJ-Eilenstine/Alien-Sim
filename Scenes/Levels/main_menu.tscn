@@ -1,14 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://bvlya2krh0n5y"]
+[gd_scene load_steps=8 format=3 uid="uid://bvlya2krh0n5y"]
 
-[ext_resource type="Theme" uid="uid://33s77meh1437" path="res://Themes/title_theme.tres" id="1_g6dv3"]
+[ext_resource type="Theme" uid="uid://33s77meh1437" path="res://themes/title_theme.tres" id="1_g6dv3"]
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_nxq51"]
 [ext_resource type="Texture2D" uid="uid://dxrtctkp6gi1f" path="res://Images/titleBG.jpg" id="2_enqk2"]
 [ext_resource type="FontFile" uid="uid://cb7i6esty10vm" path="res://Assets/Fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf" id="3_dscyh"]
 [ext_resource type="Texture2D" uid="uid://dcgxy7kvv4vw4" path="res://Assets/Sprites/planet_main.png" id="4_tnlle"]
 [ext_resource type="AudioStream" uid="uid://c8xikrmsv16qm" path="res://Audio/Alien Cow Loops.ogg" id="5_v0bon"]
+[ext_resource type="AudioStream" uid="uid://cbpvp82pcxbto" path="res://Audio/Button_click.mp3" id="7_1pfex"]
 
-[node name="Title" type="Node2D"]
+[node name="Title" type="Node2D" node_paths=PackedStringArray("buttonsound", "buttondelay")]
 script = ExtResource("1_nxq51")
+buttonsound = NodePath("ButtonClick")
+buttondelay = NodePath("ButtonDelay")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -74,6 +77,13 @@ texture = ExtResource("2_enqk2")
 stream = ExtResource("5_v0bon")
 autoplay = true
 
+[node name="ButtonClick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_1pfex")
+
+[node name="ButtonDelay" type="Timer" parent="."]
+wait_time = 0.5
+
 [connection signal="pressed" from="CanvasLayer/UI/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="CanvasLayer/UI/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="CanvasLayer/UI/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="timeout" from="ButtonDelay" to="." method="_on_button_delay_timeout"]

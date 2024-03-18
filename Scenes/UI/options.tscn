@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ciovpemod8dq0"]
+[gd_scene load_steps=3 format=3 uid="uid://ciovpemod8dq0"]
 
 [ext_resource type="FontFile" uid="uid://cb7i6esty10vm" path="res://Assets/Fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf" id="1_3ikih"]
+[ext_resource type="Script" path="res://Scenes/UI/Button.gd" id="2_2uxf7"]
 
 [node name="Options" type="Control"]
 layout_mode = 3
@@ -19,3 +20,15 @@ offset_bottom = 569.0
 theme_override_fonts/normal_font = ExtResource("1_3ikih")
 theme_override_font_sizes/normal_font_size = 48
 text = "Options Placeholder"
+
+[node name="Backbutton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 916.0
+offset_right = 329.0
+offset_bottom = 1030.0
+theme_override_font_sizes/font_size = 60
+text = "Back"
+script = ExtResource("2_2uxf7")
+
+[connection signal="pressed" from="Backbutton" to="Backbutton" method="_on_pressed"]
