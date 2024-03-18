@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://da7u12t6sdg52"]
+[gd_scene load_steps=10 format=3 uid="uid://da7u12t6sdg52"]
 
 [ext_resource type="Texture2D" uid="uid://dqbk5rwxe84ao" path="res://Assets/Tileset/Alien/AlienGrass.png" id="1_fum52"]
 [ext_resource type="Texture2D" uid="uid://ceo4n0bjxesd3" path="res://Assets/Tileset/Alien/AlienHills.png" id="2_aacqd"]
 [ext_resource type="PackedScene" uid="uid://bjcbbw8cjj5ji" path="res://Scenes/UI/MapButton.tscn" id="3_xewnx"]
 [ext_resource type="Script" path="res://Scripts/main_camera.gd" id="4_ou0x0"]
 [ext_resource type="PackedScene" uid="uid://b07ba01758dc8" path="res://Animation/alien_player.tscn" id="5_kxu3j"]
+[ext_resource type="AudioStream" uid="uid://xdsum77bhri8" path="res://Audio/Alien Play_2.ogg" id="6_dvy75"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_86rll"]
 texture = ExtResource("1_fum52")
@@ -607,3 +608,7 @@ limit_left = 0
 limit_top = 0
 script = ExtResource("4_ou0x0")
 tilemap = NodePath("../TileMap")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_dvy75")
+autoplay = true
