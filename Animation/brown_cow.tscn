@@ -2,9 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://dwfeury2ki8h4" path="res://Assets/Cows/BrownCowSheet.png" id="1_5lsjw"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_b3mto"]
-size = Vector2(31.5, 12)
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pfin3"]
 texture = ExtResource("1_5lsjw")
 texture_region_size = Vector2i(32, 32)
@@ -63,11 +60,10 @@ _data = {
 "RESET": SubResource("Animation_tq1np")
 }
 
-[node name="BrownCow" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b3mto"]
+size = Vector2(31.5, 12)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.25, 10)
-shape = SubResource("RectangleShape2D_b3mto")
+[node name="BrownCow" type="CharacterBody2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_iysjh")
@@ -81,5 +77,11 @@ autoplay = "Isle"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
+scale = Vector2(5, 5)
 texture = ExtResource("1_5lsjw")
 hframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.49012e-08, 44)
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_b3mto")
