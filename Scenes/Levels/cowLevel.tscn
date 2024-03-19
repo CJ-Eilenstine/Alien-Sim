@@ -1420,4 +1420,3 @@ tilemap = NodePath("../TileMap")
 [node name="MapButton" parent="CanvasLayer" instance=ExtResource("11_4h6y1")]
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(479, 365)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bnmtgcbeidf1l"]
+[gd_scene load_steps=8 format=3 uid="uid://bnmtgcbeidf1l"]
 
 [ext_resource type="Texture2D" uid="uid://b07v6xcyymqc8" path="res://Assets/Cows/Base_Tan.png" id="1_tx3g2"]
+[ext_resource type="Script" path="res://Scripts/abducted.gd" id="2_rqybt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8pmwf"]
 size = Vector2(26, 11)
@@ -43,6 +44,9 @@ _data = {
 "idle": SubResource("Animation_gnntm")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1w25i"]
+size = Vector2(146, 119)
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -51,6 +55,8 @@ texture = ExtResource("1_tx3g2")
 hframes = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 5
+visibility_layer = 5
 position = Vector2(0, 47)
 scale = Vector2(5, 5)
 shape = SubResource("RectangleShape2D_8pmwf")
@@ -60,3 +66,10 @@ libraries = {
 "": SubResource("AnimationLibrary_xf7rg")
 }
 autoplay = "idle"
+
+[node name="abductionBox" type="Area2D" parent="."]
+script = ExtResource("2_rqybt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="abductionBox"]
+position = Vector2(-6, 17.5)
+shape = SubResource("RectangleShape2D_1w25i")

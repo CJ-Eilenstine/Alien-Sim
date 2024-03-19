@@ -191,3 +191,5 @@ position = Vector2(528, 418)
 scale = Vector2(5, 5)
 script = ExtResource("5_bnc1t")
 tilemap = NodePath("../TileMap")
+
+[node name="Marker2D" type="Marker2D" parent="."]

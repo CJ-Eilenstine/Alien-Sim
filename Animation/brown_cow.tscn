@@ -1,6 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://duqe23o7hk1se"]
+[gd_scene load_steps=11 format=3 uid="uid://duqe23o7hk1se"]
 
 [ext_resource type="Texture2D" uid="uid://dwfeury2ki8h4" path="res://Assets/Cows/BrownCowSheet.png" id="1_5lsjw"]
+[ext_resource type="Script" path="res://Scripts/brown_cow.gd" id="1_qp4sp"]
+[ext_resource type="Script" path="res://Scripts/abducted.gd" id="2_tk1di"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pfin3"]
 texture = ExtResource("1_5lsjw")
@@ -63,7 +65,11 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b3mto"]
 size = Vector2(31.5, 12)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x0qfv"]
+size = Vector2(160, 131)
+
 [node name="BrownCow" type="CharacterBody2D"]
+script = ExtResource("1_qp4sp")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_iysjh")
@@ -82,6 +88,17 @@ texture = ExtResource("1_5lsjw")
 hframes = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 5
+visibility_layer = 5
 position = Vector2(-1.49012e-08, 44)
 scale = Vector2(5, 5)
 shape = SubResource("RectangleShape2D_b3mto")
+
+[node name="abductionBox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("2_tk1di")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="abductionBox"]
+position = Vector2(-1, 15.5)
+shape = SubResource("RectangleShape2D_x0qfv")
