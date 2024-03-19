@@ -17,6 +17,8 @@ script = ExtResource("1_3bws3")
 texture = ExtResource("2_01era")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 4
+visibility_layer = 0
 position = Vector2(0, 3.5)
 shape = SubResource("RectangleShape2D_myw2r")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)

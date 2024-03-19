@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://da7u12t6sdg52"]
+[gd_scene load_steps=11 format=3 uid="uid://da7u12t6sdg52"]
 
 [ext_resource type="Texture2D" uid="uid://dqbk5rwxe84ao" path="res://Assets/Tileset/Alien/AlienGrass.png" id="1_fum52"]
+[ext_resource type="Script" path="res://Scripts/alien_world.gd" id="1_uudoy"]
 [ext_resource type="Texture2D" uid="uid://ceo4n0bjxesd3" path="res://Assets/Tileset/Alien/AlienHills.png" id="2_aacqd"]
 [ext_resource type="PackedScene" uid="uid://bjcbbw8cjj5ji" path="res://Scenes/UI/MapButton.tscn" id="3_xewnx"]
 [ext_resource type="Script" path="res://Scripts/main_camera.gd" id="4_ou0x0"]
@@ -580,6 +581,7 @@ sources/0 = SubResource("TileSetAtlasSource_86rll")
 sources/2 = SubResource("TileSetAtlasSource_jl8sj")
 
 [node name="AlienWorld" type="Node2D"]
+script = ExtResource("1_uudoy")
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(5, 5)
@@ -612,3 +614,5 @@ tilemap = NodePath("../TileMap")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_dvy75")
 autoplay = true
+
+[node name="Marker2D" type="Marker2D" parent="."]

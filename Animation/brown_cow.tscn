@@ -100,5 +100,7 @@ collision_mask = 4
 script = ExtResource("2_tk1di")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="abductionBox"]
+light_mask = 0
+visibility_layer = 4
 position = Vector2(-1, 15.5)
 shape = SubResource("RectangleShape2D_x0qfv")

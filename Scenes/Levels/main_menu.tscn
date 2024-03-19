@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bvlya2krh0n5y"]
 
-[ext_resource type="Theme" uid="uid://33s77meh1437" path="res://themes/title_theme.tres" id="1_g6dv3"]
+[ext_resource type="Theme" uid="uid://33s77meh1437" path="res://Themes/title_theme.tres" id="1_g6dv3"]
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_nxq51"]
 [ext_resource type="FontFile" uid="uid://cb7i6esty10vm" path="res://Assets/Fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf" id="3_dscyh"]
 [ext_resource type="Texture2D" uid="uid://dcgxy7kvv4vw4" path="res://Assets/Sprites/planet_main.png" id="4_tnlle"]
@@ -64,6 +64,7 @@ theme_override_fonts/font = ExtResource("3_dscyh")
 text = "Quit"
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/UI"]
+visible = false
 position = Vector2(1654, 182)
 scale = Vector2(2.05091, 2.12903)
 texture = ExtResource("4_tnlle")

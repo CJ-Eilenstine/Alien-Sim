@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3 uid="uid://dfs031qsh6ul0"]
+
+[ext_resource type="Texture2D" uid="uid://bmsiinth82frv" path="res://Assets/Cows/Base_Alien.png" id="1_1dg5t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m0jfw"]
+size = Vector2(25.6, 12.6)
+
+[sub_resource type="Animation" id="Animation_38016"]
+resource_name = "idle"
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 0]
+}
+
+[sub_resource type="Animation" id="Animation_df6j0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_efsvi"]
+_data = {
+"RESET": SubResource("Animation_df6j0"),
+"idle": SubResource("Animation_38016")
+}
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+scale = Vector2(5, 5)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1dg5t")
+hframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.4, 8.4)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_m0jfw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_efsvi")
+}
+autoplay = "idle"

@@ -71,5 +71,7 @@ autoplay = "idle"
 script = ExtResource("2_rqybt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="abductionBox"]
+light_mask = 0
+visibility_layer = 4
 position = Vector2(-6, 17.5)
 shape = SubResource("RectangleShape2D_1w25i")
