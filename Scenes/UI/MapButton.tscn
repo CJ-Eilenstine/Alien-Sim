@@ -1,8 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bjcbbw8cjj5ji"]
+[gd_scene load_steps=3 format=3 uid="uid://bjcbbw8cjj5ji"]
 
 [ext_resource type="Script" path="res://Scripts/MapButton.gd" id="1_ffvan"]
+[ext_resource type="AudioStream" uid="uid://cbpvp82pcxbto" path="res://Audio/Button_click.mp3" id="2_beeou"]
 
-[node name="MapButton" type="Button"]
+[node name="MapButton" type="Button" node_paths=PackedStringArray("buttonsound", "buttondelay")]
 offset_left = 31.0
 offset_top = 946.0
 offset_right = 240.0
@@ -10,5 +11,14 @@ offset_bottom = 1056.0
 theme_override_font_sizes/font_size = 50
 text = "Map"
 script = ExtResource("1_ffvan")
+buttonsound = NodePath("AudioStreamPlayer")
+buttondelay = NodePath("buttondelay")
+
+[node name="buttondelay" type="Timer" parent="."]
+wait_time = 0.555
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_beeou")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="timeout" from="buttondelay" to="." method="_on_buttondelay_timeout"]

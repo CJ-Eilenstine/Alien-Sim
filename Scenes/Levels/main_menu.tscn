@@ -2,9 +2,9 @@
 
 [ext_resource type="Theme" uid="uid://33s77meh1437" path="res://themes/title_theme.tres" id="1_g6dv3"]
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_nxq51"]
-[ext_resource type="Texture2D" uid="uid://dxrtctkp6gi1f" path="res://Images/titleBG.jpg" id="2_enqk2"]
 [ext_resource type="FontFile" uid="uid://cb7i6esty10vm" path="res://Assets/Fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf" id="3_dscyh"]
 [ext_resource type="Texture2D" uid="uid://dcgxy7kvv4vw4" path="res://Assets/Sprites/planet_main.png" id="4_tnlle"]
+[ext_resource type="Texture2D" uid="uid://c31i2qx3csfi4" path="res://Images/menu.png" id="5_s3jb7"]
 [ext_resource type="AudioStream" uid="uid://c8xikrmsv16qm" path="res://Audio/Alien Cow Loops.ogg" id="5_v0bon"]
 [ext_resource type="AudioStream" uid="uid://cbpvp82pcxbto" path="res://Audio/Button_click.mp3" id="7_1pfex"]
 
@@ -69,9 +69,9 @@ scale = Vector2(2.05091, 2.12903)
 texture = ExtResource("4_tnlle")
 
 [node name="TitleBg" type="Sprite2D" parent="."]
-position = Vector2(959.001, 540)
-scale = Vector2(1.6684, 1.66667)
-texture = ExtResource("2_enqk2")
+position = Vector2(971.901, 544.25)
+scale = Vector2(1.00614, 1.00509)
+texture = ExtResource("5_s3jb7")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_v0bon")
